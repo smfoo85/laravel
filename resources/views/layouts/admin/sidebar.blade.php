@@ -32,21 +32,17 @@
             </span>
           </a>
         </li>
-        <li class="treeview">
+        <li class="treeview {{ request()->routeIs('admin.*') ? 'active':'' }}">
           <a href="#">
             <i class="fa fa-shopping-cart"></i>
-            <span>e-Commerce</span>
+            <span>Admin</span>
             <span class="pull-right-container">
               <i class="fa fa-angle-right pull-right"></i>
             </span>
           </a>
           <ul class="treeview-menu">
-			<li><a href="../ecommerce/products.html"><i class="fa fa-circle-thin"></i>Products</a></li>
-            <li><a href="../ecommerce/orders.html"><i class="fa fa-circle-thin"></i>Product Orders</a></li>
-            <li><a href="../ecommerce/product-details.html"><i class="fa fa-circle-thin"></i>Product Details</a></li>
-			<li><a href="../ecommerce/product-edit.html"><i class="fa fa-circle-thin"></i>Product Edit</a></li>
-            <li><a href="../ecommerce/cart.html"><i class="fa fa-circle-thin"></i>Product Cart</a></li>
-            <li><a href="../ecommerce/checkout.html"><i class="fa fa-circle-thin"></i>Product Checkout</a></li>
+			<li class="{{request()->routeIs('admin.roles.index') ? 'active':'' }}"><a href="{{route('admin.roles.index')}}"><i class="fa fa-circle-thin"></i>Roles</a></li>
+            <li class="{{request()->routeIs('admin.permissions.index') ? 'active':'' }}"><a href="{{route('admin.permissions.index')}}"><i class="fa fa-circle-thin"></i>Permissions</a></li>
           </ul>
         </li>
         <li class="treeview">
@@ -196,7 +192,7 @@
             <li><a href="../forms/xeditable.html"><i class="fa fa-circle-thin"></i>Xeditable Editor</a></li>
           </ul>
         </li>
-        <li class="treeview active">
+        <li class="treeview">
           <a href="#">
             <i class="fa fa-table"></i> <span>Tables</span>
             <span class="pull-right-container">

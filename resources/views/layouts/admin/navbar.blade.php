@@ -296,8 +296,8 @@
                 <img src="../../../images/user5-128x128.jpg" class="float-left rounded-circle" alt="User Image">
 
                 <p>
-                  Juliya Brus
-                  <small class="mb-5">jb@gmail.com</small>
+                    {{Auth::user()->name}}
+                  <small class="mb-5">{{Auth::user()->email}}</small>
                   <a href="#" class="btn btn-danger btn-sm btn-rounded">View Profile</a>
                 </p>
               </li>
